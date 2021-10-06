@@ -40,7 +40,7 @@ use `users`;
 
 # grant our user privileges
 
-GRANT ALL PRIVILEGES ON user.* to 'dbadmin'@'localhost'
+GRANT ALL PRIVILEGES ON users.* to 'dbadmin'@'localhost' ;
 
 # creating tables:
 
