@@ -32,7 +32,7 @@ CREATE USER 'dbadmin'@localhost IDENTIFIED BY 'dbadmin@123';
 
 # create db:
 
-CREATE DATABASE IF NOT EXISTS 'users' DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE users;
 
 # select DB
 
