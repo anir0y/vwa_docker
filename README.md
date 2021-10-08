@@ -5,7 +5,7 @@ SQLI labs to test error based, Blind boolean based, Time based.
 
 # setting up local web-application server
 
-# 1 : setting up LAMP stack
+# 1 : setting up [LAMP stack](https://notes.anir0y.in/ubuntu-installing-lamp-stack)
 
 LAMP stack is stands for: 
 
