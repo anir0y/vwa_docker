@@ -26,6 +26,11 @@ you can download the code from this [GitHub Repo](https://github.com/anir0y/aris
 
 ```sql
 
+# Login to MySQL
+
+sudo mysql -u root 
+# you'll be prompted by `mysql>` 
+
 # create user with password
 
 CREATE USER 'dbadmin'@localhost IDENTIFIED BY 'dbadmin@123';
@@ -66,7 +71,7 @@ INSERT INTO `userlogin` (`id`, `username`, `password`)VALUES (1, 'admin', 'a1857
 new mysqli("127.0.0.1", "useradm", "useradm", "userdb")
 
 # new
-new mysqli("127.0.0.1", "dbadmin", "dbadmin", "users")
+new mysqli("127.0.0.1", "dbadmin", "dbadmin@123", "users")
 
 ```
 
