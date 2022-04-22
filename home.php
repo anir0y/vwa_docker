@@ -84,6 +84,7 @@ body {
 </style>
 
 <div class="menu">
+  <a href="upload.php">File Upload</a>
   <a href="logout.php">Log Out</a>
   <a href="search.php">find users</a>
 </div>
