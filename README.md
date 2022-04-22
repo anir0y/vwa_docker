@@ -1,6 +1,6 @@
-# arishti-01
-Code that used by @anir0y during his talk on #Arishti 
-SQLI labs to test error based, Blind boolean based, Time based.
+# VWA Lab for Classroom Training
+
+this lab is designed and developved by @anir0y this is a way to teach students about common mistakes made by devs
 
 
 # setting up local web-application server
