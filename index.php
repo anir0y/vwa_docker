@@ -188,7 +188,7 @@ echo $q;
 	
 	if ($row){
 	//$_SESSION["id"] = $row[0];
-	$_SESSION["username"] = $row[username];
+	$_SESSION["username"] = $row[1];
 	$_SESSION["name"] = $row[3];
 	//ob_clean();
 	
