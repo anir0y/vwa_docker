@@ -46,4 +46,6 @@ if ($uploadOk == 0) {
     echo "Sorry, there was an error uploading your file.";
   }
 }
+sleep(10);
+header("Location:upload.php");
 ?>
