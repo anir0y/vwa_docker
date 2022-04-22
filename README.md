@@ -68,10 +68,10 @@ INSERT INTO `userlogin` (`id`, `username`, `password`)VALUES (1, 'admin', 'a1857
 
 ````php
 # old
-new mysqli("127.0.0.1", "useradm", "useradm", "userdb")
+new mysqli("127.0.0.1", "useradm", "useradm", "userdb");
 
 # new
-new mysqli("127.0.0.1", "dbadmin", "dbadmin@123", "users")
+new mysqli("127.0.0.1", "dbadmin", "dbadmin@123", "users");
 
 ```
 
