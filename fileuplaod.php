@@ -4,7 +4,7 @@ $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-//// Check if image file is a actual image or fake image
+// Check if image file is a actual image or fake image
 //if(isset($_POST["submit"])) {
 //  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
 //  if($check !== false) {
@@ -15,7 +15,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 //    $uploadOk = 0;
 //  }
 //}
-//
+
 // Check if file already exists
 if (file_exists($target_file)) {
   echo "Sorry, file already exists.";
@@ -46,6 +46,7 @@ if ($uploadOk == 0) {
     echo "Sorry, there was an error uploading your file.";
   }
 }
-sleep(10);
-header("Location:upload.php");
+// just to supress and prevent exposing our upload dir msg!
+//sleep(5);
+//header("Location:upload.php");
 ?>
