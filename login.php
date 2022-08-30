@@ -1,9 +1,17 @@
 <?php
 ob_start();
 session_start();
-include("dbconf.php");
+require_once("dbconf.php");
+
+if (!$_SESSION["username"]){
+	header('Location:index.php');
+}
+else {
+	header('Location:home.php');
+}
 ini_set('display_errors', 1);
 ?>
+
 <html>
 <head><title>SQL LAB </title>
 </head>
@@ -31,10 +39,6 @@ p {
    text-align: center;
 }
 </style>
-
-
-
-
 
 <center>
 <h1> Login Please</h1><br><br><br>
