@@ -13,55 +13,22 @@ if(isset($_COOKIE["Session_ID"])){
 
 }
 ?>
-
-<html>
-<head><title>Find users </title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
-<body>
-<style>
 
 
-html body{
-  background-image: url(https://raw.githubusercontent.com/anir0y/cdn/main/2454628.png)
-}
-
-h2{
-  color: blue;
-}
-
-#id{
-  color: red;
-  text-align: center;
-}
-div {
-  margin-top: 30vh;
-  margin-right: -45%;
-  height: 200px;
-  width: 50%;
-  background-color: black;
-  opacity: 90%;
-  color: white;
-}
-
-
-#id{
-  color: red;
-  text-align: center;
-}
-
-.phpmsg{
-  margin-top: -30vh;
-  height: 200px;
-  width: 50%;
-  background-color: black;
-}
-
-</style>
+<?php include 'static/menu.php';?>
+<div class="about">
+<div class="inner-about">
+<head><title>Find users </title>
 
 <center>
 
-<div >
-<h1> Find users with ID</h1><br><br><br>
+<h1> Find users with ID</h1><br>
     <form method="GET" autocomplete="off">
 			<input type="text" id="id" placeholder="Type UserID" name="id">
 			<input type="submit" value="Submit"/> 
@@ -74,7 +41,7 @@ div {
 <div class="phpmsg">
 <?php
 if(isset($_COOKIE["Session_ID"])){
-    echo "Hi " . $_COOKIE["Session_ID"];
+    echo "Session is Authorized!";
 } else{
     echo "<script>alert('You are not authorized!');</script>";
 }
