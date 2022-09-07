@@ -1,3 +1,7 @@
+Status:
+
+[![Docker Image CI](https://github.com/anir0y/vwa/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/anir0y/vwa/actions/workflows/docker-image.yml)
+
 # VWA Lab for Classroom Training
 
 this lab is designed and developved by @anir0y this is a way to teach students about common mistakes made by devs
@@ -18,7 +22,11 @@ LAMP stack is stands for:
 
 # 2 : download the web-application code.
 
-you can download the code from this [GitHub Repo](https://github.com/anir0y/arishti-01)
+clone the repo
+
+`git clone https://github.com/anir0y/vwa`
+
+>  move contents of `vwa` folder to `/var/www/html` dir. 
 
 # 3 : configuration
 
@@ -75,8 +83,30 @@ new mysqli("127.0.0.1", "dbadmin", "dbadmin@123", "users");
 
 ```
 
+## Docker 
+
+```bash
+docker pull anir0y/vwa
+Using default tag: latest
+latest: Pulling from anir0y/vwa
+...
+Status: Downloaded newer image for anir0y/vwa:latest
+docker.io/anir0y/vwa:latest
+
+# verify
+docker images                    
+REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
+anir0y/vwa   latest    015c231e4df8   19 minutes ago   719MB
+
+# run the app
+docker run -d -p 80:80 anir0y/vwa
+```
+
+
 
 ### Talk to me 
   - mail@anir0y.in
+  - https://twitter.com/anir0y
+ 
   
 ---
