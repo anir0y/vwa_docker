@@ -4,11 +4,11 @@ SET time_zone = "+00:00";
 // create user with password
 // CREATE USER 'dbadmin'@localhost IDENTIFIED BY 'dbadmin@123';
 
-CREATE DATABASE IF NOT EXISTS 'users' DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE DATABASE IF NOT EXISTS `users` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 use `users`;
 
 // grant user to the DB
-GRANT ALL PRIVILEGES ON user.* to 'dbadmin'@'localhost'
+GRANT ALL PRIVILEGES ON user.* to 'dbadmin'@'localhost'; 
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `userlogin` (
@@ -21,5 +21,7 @@ CREATE TABLE IF NOT EXISTS `userlogin` (
 
 INSERT INTO `userlogin` (`id`, `username`, `password`) VALUES
   (99, 'mentor', 'a1857b83457cfef98da22fefa2fdd3ba');
+
+INSERT INTO `userlogin` (`id`, `username`, `password`) VALUES
   (1, 'admin', 'a631f025057cd3fe0fb4fe19f6b46309');
 

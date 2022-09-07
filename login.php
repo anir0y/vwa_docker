@@ -55,6 +55,7 @@ p {
 			<input type="reset" value="Reset"/>
 			</p></div>
 		</form>
+		
 		</center>
 
 <?php
