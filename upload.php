@@ -39,3 +39,4 @@ ini_set('display_errors', 1);
 
 </body>
 </html>
+<?php include 'static/footer.php';?>

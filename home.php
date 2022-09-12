@@ -30,8 +30,7 @@ ini_set('display_errors', 1);
     <p>You Completed this task Successfully</p>
   </div>
 </div>
- 
-<div class="footer">
-  <p>Code with ❤️ by @anir0y </p>   
+  
 </body>
 </html>
+<?php include 'static/footer.php';?>

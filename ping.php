@@ -46,6 +46,4 @@ if ($rhost = ($_GET["rhost"])) {
 </h3></center>
 </body>
 </html>
-
-</div>
-</div>
+<?php include 'static/footer.php';?>

@@ -72,3 +72,4 @@ $con->close();
 <div>
 </body>
 </html>
+<?php include 'static/footer.php';?>
