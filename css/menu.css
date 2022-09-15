@@ -1,0 +1,85 @@
+:root {
+	--redyellow:  linear-gradient(to right, rgb(95, 90, 241) , rgba(240,196,25,1));
+	--yellowgreen:linear-gradient(to right, rgba(240,196,25,1) , rgba(78,186,111,1));
+	--greenblue:linear-gradient(to right, rgba(78,186,111,1) ,rgba(45,149,191,1) );
+	--bluepurple:linear-gradient(to right, rgba(45,149,191,1), rgba(149,91,165,1));
+	--purplered:linear-gradient(to right, rgba(149,91,165,1), rgb(95, 90, 241));
+
+}
+* {
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+body {
+	font-size:calc(14px + .25vw);
+	line-height:1.5;
+}
+nav ul {
+	display:flex;
+	list-style:none;
+	justify-content:space-between;
+	box-shadow:0 1px 2px rgba(21,21,21,0.25);
+	
+}
+ul li {
+	flex-grow:1;
+	text-align:center;
+	position:relative;
+}
+ul li a {
+	color:#fff;
+	font-size:1.25rem;
+	text-decoration:none;
+	letter-spacing:1px;
+	display:block;
+	padding:.5rem 0;
+}
+ul:hover  li:after {
+	content:"";
+	position:absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	background: grey;
+	opacity:0.75;
+}
+nav ul li:nth-child(5n-4) {
+	background: var(--redyellow);
+}
+nav ul li:nth-child(5n-3) {
+	background: var(--yellowgreen);
+}
+nav ul li:nth-child(5n-2) {
+	background: var(--greenblue);
+}
+nav ul li:nth-child(5n-1) {
+	background: var(--bluepurple);
+}
+nav ul li:nth-child(5n) {
+	background: var(--purplered);
+}
+nav ul li:hover:nth-child(5n-4):after {
+	background: var(--redyellow);
+	content:none;
+}
+nav ul li:hover:nth-child(5n-3):after {
+	background: var(--yellowgreen);
+	content:none;
+}
+nav ul li:hover:nth-child(5n-2):after {
+	background: var(--greenblue);
+	content:none;
+}
+nav ul li:hover:nth-child(5n-1):after {
+	background: var(--bluepurple);
+	content:none;
+}
+nav ul li:hover:nth-child(5n):after {
+	background: var(--purplered);
+	content:none;
+}
+
+
+
