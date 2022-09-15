@@ -33,14 +33,9 @@ if(($_COOKIE["Session_ID"]=="Arishti-Admin")){
     echo "<h3>Your Flag is: Flag{" .sha1("adminflag"). " }</h3>" ;
 } else{
   echo "<h3>Can you login as Admin?</h3>" ;
-
-    
-
-
 }
 
 ?>
-
 
 </div>
 </div>

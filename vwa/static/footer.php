@@ -1,4 +1,7 @@
-<p>Code with ❤️ by @anir0y </p>
+<div class="footer">
+  <p>Code with ❤️ by @anir0y </p>   
+</body>
+</html>
 <script>
 if (document.domain != "hackmylab.xyz" && document.domain != "www.hackmylab.xyz") {
     var l = location.href;

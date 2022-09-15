@@ -30,15 +30,6 @@ ini_set('display_errors', 1);
     Name: <input type="text" name="name" />
     <input type="submit">
     </h3></center>
-    
-
-
-
-
 </div>
 </div>
- 
-<div class="footer">
-  <p>Code with ❤️ by @anir0y </p>   
-</body>
-</html>
+<?php include 'static/footer.php';?>

@@ -55,6 +55,7 @@ p {
 			<input type="reset" value="Reset"/>
 			</p></div>
 		</form>
+		
 		</center>
 
 <?php
@@ -91,8 +92,7 @@ echo $q;
 
 ?>
 
-<div class="footer">
-  <p>Code with ❤️ by @anir0y </p>
 </div>
 </body>
 </html>
+<?php include 'static/footer.php';?>
