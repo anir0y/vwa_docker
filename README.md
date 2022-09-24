@@ -1,6 +1,6 @@
 Status:
 
-[![Docker Image CI](https://github.com/anir0y/vwa/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/anir0y/vwa/actions/workflows/docker-image.yml)
+[![Docker Image CI](https://github.com/anir0y/vwa_docker/actions/workflows/docker-image.yml/badge.svg?branch=main)](https://github.com/anir0y/vwa_docker/actions/workflows/docker-image.yml)
 
 # VWA Lab for Classroom Training
 
