@@ -1,6 +1,6 @@
 <?php
 
-$con = new mysqli("127.0.0.1", "dbadmin", "dbadmin@123", "users");
+$con = new mysqli("127.0.0.1", "app", "vulnerables", "vwa");
 
 if ($con -> connect_error){
     die("Database Not Configured Properly");
@@ -13,9 +13,9 @@ else{
 /* Database credentials. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 define('DB_SERVER', '127.0.0.1');
-define('DB_USERNAME', 'dbadmin');
-define('DB_PASSWORD', 'dbadmin@123');
-define('DB_NAME', 'users');
+define('DB_USERNAME', 'app');
+define('DB_PASSWORD', 'vulnerables');
+define('DB_NAME', 'vwa');
  
 /* Attempt to connect to MySQL database */
 try{

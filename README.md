@@ -95,7 +95,14 @@ anir0y/vwa   latest    015c231e4df8   19 minutes ago   719MB
 docker run -d -p 80:80 anir0y/vwa
 ```
 
+## local Build 
 
+```bash
+docker build -t vwalocal .
+docker run -p 80:80 vwalocal
+
+# check https://dashboard.ngrok.com/ agents page to get the URL for ngrok
+```
 
 ### Talk to me 
 

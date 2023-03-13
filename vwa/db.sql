@@ -2,8 +2,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 // create user with password
-// CREATE USER 'dbadmin'@localhost IDENTIFIED BY 'dbadmin@123';
-
+// user : app pass: vulnerables
 CREATE DATABASE IF NOT EXISTS `users` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 use `users`;
 

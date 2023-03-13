@@ -3,7 +3,8 @@ FROM debian:9.2
 LABEL maintainer "mail@anir0y.in"
 
 RUN apt-get update && \
-    apt-get upgrade -y && \
+    #apt-get upgrade -y && \
+    apt-get install wget -y && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     debconf-utils && \
     echo mariadb-server mysql-server/root_password password vulnerables | debconf-set-selections && \
@@ -19,6 +20,7 @@ RUN apt-get update && \
     && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
 
 
 COPY vwa /var/www/html

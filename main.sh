@@ -9,6 +9,11 @@ mysql -u root < /docker-entrypoint-initdb.d/db.sql
 
 echo '[+] Starting apache'
 service apache2 start
+# ngrok
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz -O /home/ngrok.tgz
+tar zxvf /home/ngrok.tgz
+./ngrok config add-authtoken {token}
+./ngrok http 80
 
 while true
 do
