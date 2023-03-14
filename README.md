@@ -18,8 +18,6 @@ LAMP stack is stands for:
 * MySQL	(db)
 * Php 	(scripting Lang.)
 
----
-
 ## Docker 
 
 ```bash
@@ -47,6 +45,7 @@ docker run -p 80:80 vwalocal
 
 # check https://dashboard.ngrok.com/ agents page to get the URL for ngrok
 ```
+
 
 ### Talk to me 
 
