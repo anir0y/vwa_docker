@@ -20,62 +20,6 @@ LAMP stack is stands for:
 
 ---
 
-# 2 : download the web-application code.
-
-clone the repo
-
-`git clone https://github.com/anir0y/vwa`
-
->  move contents of `vwa` folder to `/var/www/html` dir. 
-
-# 3 : configuration
-
-## MySql
-
-```sql
-
-# Login to MySQL
-sudo mysql -u root 
-
-# you will be prompted by mysql>
-# create user with password
-
-CREATE USER 'dbadmin'@localhost IDENTIFIED BY 'dbadmin@123';
-
-# create db:
-CREATE DATABASE users;
-
-# select DB
-use `users`;
-
-# grant our user privileges
-GRANT ALL PRIVILEGES ON users.* to 'dbadmin'@'localhost' ;
-
-# creating tables:
-CREATE TABLE IF NOT EXISTS `userlogin` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(200) NOT NULL,
-  `password` varchar(33) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
-# insert values:
-INSERT INTO `userlogin` (`id`, `username`, `password`)VALUES (99, 'mentor', 'a1857b83457cfef98da22fefa2fdd3ba');
-INSERT INTO `userlogin` (`id`, `username`, `password`)VALUES (1, 'admin', 'a1857b83457cfef98da22fefa2fdd3ba');
-```
-
-### PHP
-
-* open `dbconf.php` add the creds:
-
-```php
-# old
-new mysqli("127.0.0.1", "useradm", "useradm", "userdb");
-
-# new
-new mysqli("127.0.0.1", "dbadmin", "dbadmin@123", "users");
-```
-
 ## Docker 
 
 ```bash
@@ -95,9 +39,9 @@ anir0y/vwa   latest    015c231e4df8   19 minutes ago   719MB
 docker run -d -p 80:80 anir0y/vwa
 ```
 
-## local Build 
+## Local Build 
 
-```bash
+```docker
 docker build -t vwalocal .
 docker run -p 80:80 vwalocal
 
