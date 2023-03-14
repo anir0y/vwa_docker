@@ -42,9 +42,10 @@ docker run -d -p 80:80 anir0y/vwa
 ```docker
 docker build -t vwalocal .
 docker run -p 80:80 vwalocal
-
-# check https://dashboard.ngrok.com/ agents page to get the URL for ngrok
 ```
+
+check `https://dashboard.ngrok.com/` agents page to get the URL for ngrok
+
 
 
 ### Talk to me 
