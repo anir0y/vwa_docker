@@ -1,219 +1,73 @@
-<?php
-ob_start();
-session_start();
-require_once("dbconf.php");
-
-if (!$_SESSION["username"]){
-	echo "";  
-}
-else {
-	header('Location:home.php');
-}
-ini_set('display_errors', 1);
-?>
-
+<!DOCTYPE html>
 <html>
-<head><title>SQL LAB </title>
+<head>
+	<title>Web Application Challenge</title>
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-aiZQg+3q3UzxdDGjlHBy6UvRG6ZJP5d5XQ8WJ7B5vOwzOrI/ggvofL8WY/sVJsLAVRjPpXN44gI8MUCv7nKjQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<style>
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			width: 100%;
+			flex-direction: row;
+			position: relative;
+		}
+		.left {
+			position: absolute;
+			top: 50%;
+			left: 10%;
+			transform: translateY(-50%);
+		}
+		.right {
+			position: absolute;
+			top: 50%;
+			right: 10%;
+			transform: translateY(-50%);
+		}
+		.line {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			height: 80%;
+			border-left: dotted 2px;
+		}
+		button {
+			padding: 10px 20px;
+			font-size: 16px;
+			border-radius: 5px;
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+	</style>
 </head>
 <body>
-<style type="text/css">
-@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
-
-body{
-	margin: 0;
-	padding: 0;
-	background: #fff;
-
-	color: #fff;
-	font-family: Arial;
-	font-size: 12px;
-}
-
-.body{
-	position: absolute;
-	top: -20px;
-	left: -20px;
-	right: -40px;
-	bottom: -40px;
-	width: auto;
-	height: auto;
-	background-image: url(http://ginva.com/wp-content/uploads/2012/07/city-skyline-wallpapers-008.jpg);
-	background-size: cover;
-	-webkit-filter: blur(5px);
-	z-index: 0;
-}
-
-.grad{
-	position: absolute;
-	top: -20px;
-	left: -20px;
-	right: -40px;
-	bottom: -40px;
-	width: auto;
-	height: auto;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
-	z-index: 1;
-	opacity: 0.7;
-}
-
-.header{
-	position: absolute;
-	top: calc(50% - 35px);
-	left: calc(50% - 255px);
-	z-index: 2;
-}
-
-.header div{
-	float: left;
-	color: #fff;
-	font-family: 'Exo', sans-serif;
-	font-size: 35px;
-	font-weight: 200;
-}
-
-.header div span{
-	color: #5379fa !important;
-}
-
-.login{
-	position: absolute;
-	top: calc(50% - 75px);
-	left: calc(50% - 50px);
-	height: 150px;
-	width: 350px;
-	padding: 10px;
-	z-index: 2;
-}
-
-.login input[type=text]{
-	width: 250px;
-	height: 30px;
-	background: transparent;
-	border: 1px solid rgba(255,255,255,0.6);
-	border-radius: 2px;
-	color: #fff;
-	font-family: 'Exo', sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	padding: 4px;
-}
-
-.login input[type=password]{
-	width: 250px;
-	height: 30px;
-	background: transparent;
-	border: 1px solid rgba(255,255,255,0.6);
-	border-radius: 2px;
-	color: #fff;
-	font-family: 'Exo', sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	padding: 4px;
-	margin-top: 10px;
-}
-
-.login input[type=submit]{
-	width: 260px;
-	height: 35px;
-	background: #fff;
-	border: 1px solid #fff;
-	cursor: pointer;
-	border-radius: 2px;
-	color: #a18d6c;
-	font-family: 'Exo', sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	padding: 6px;
-	margin-top: 10px;
-}
-
-.login input[type=submit]:hover{
-	opacity: 0.8;
-}
-
-.login input[type=submit]:active{
-	opacity: 0.6;
-}
-
-.login input[type=text]:focus{
-	outline: none;
-	border: 1px solid rgba(255,255,255,0.9);
-}
-
-.login input[type=password]:focus{
-	outline: none;
-	border: 1px solid rgba(255,255,255,0.9);
-}
-
-.login input[type=submit]:focus{
-	outline: none;
-}
-
-::-webkit-input-placeholder{
-   color: rgba(255,255,255,0.6);
-}
-
-::-moz-input-placeholder{
-   color: rgba(255,255,255,0.6);
-}
-</style>
-
-<!--html code -->
-<div class="body"></div>
-		<div class="grad"></div>
-		<div class="header">
-			<div>Arishti<span>Lab</span></div>
+	<div class="container">
+		<div class="left">
+			<img src="https://seeklogo.com/images/E/exela-technologies-logo-BDE438C264-seeklogo.com.png" width="30%" height="auto"></img>
 		</div>
-		<br>
-		<div class="login">
-			<form method="POST" autocomplete="off">
-				Username:  <input type="text" id="uid" placeholder="Type username" name="uid"><br /></br />
-				Password: <input type="password" id="pass"placeholder="Type password"  name="password">
-				<input type="submit" value="Submit"/> 
-			</form>
-			
-			<!-- <a href=register.php>Register</a> -->
-		</div>
-
-<!--EOF -->
-
-<?php
-
-if (!empty($_REQUEST['uid'])) {
-$username = ($_REQUEST['uid']);
-$pass = $_REQUEST['password'];
-
-$q = "SELECT * FROM userlogin where username='".$username."' AND password = '".md5($pass)."'" ;
-echo $q;
-	if (!mysqli_query($con,$q))
-	{
-		die('Error: ' . mysqli_error($con));
-	}
-	$result = mysqli_query($con,$q);
-	$row_cnt = mysqli_num_rows($result);
-	if ($row_cnt > 0) {
-	
-	$row = mysqli_fetch_array($result);
-	
-	if ($row){
-	//$_SESSION["id"] = $row[0];
-	$_SESSION["username"] = $row[1];
-	$_SESSION["name"] = $row[3];
-	//ob_clean();
-	
-	header('Location:home.php');
-	setcookie("Session_ID", "Arishti-User", time()+30*24*60*60);
-	}
-}
-	else{
-		echo "<center><font style=\"color:#FF0000\"><br \>Invalid password! <b>Try Harder<b> </font\>";
-	}
-}
-
-?>
- 
-<?php include 'static/footer.php';?>
-</div>
+		<div class="line"></div>
+		<div class="right">
+            <form action="login.php">
+                <button type="submit" style="display: flex; align-items: center; justify-content: center; padding: 20px 20px; font-size: 27px; height: 30px;">
+                  <i class="fal fa-sign-in" style="margin-right: 5px;"></i>
+                  Let's Start!
+                </button>
+              </form>
+              </div>
+        <div class="right" style="position: relative;">
+            
+            <pre>
+                <em>
+                    you have to loign to the app and solve challenges to find all flags.
+                </em>
+              </pre>
+        </div>
+              
+	</div>
 </body>
 </html>

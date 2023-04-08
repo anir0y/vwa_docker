@@ -23,7 +23,7 @@ ini_set('display_errors', 1);
   <div class="inner-about">
     <?php 
     echo "<h2> Your userID is: " . $_SESSION['username'] . "</h2>";
-    echo "Your Unique Flad ID: " .sha1($_SESSION['username']). " !" ;
+    echo "Your Unique Flad ID: Exela_Flag{AuthBypass_iz_ezpz}" ;
     ?>
     <br><hr><br>
     <h1>You Did it!</h1><br>

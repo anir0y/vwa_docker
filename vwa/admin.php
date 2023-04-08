@@ -28,12 +28,14 @@ ini_set('display_errors', 1);
 
 <?php
 
+
 if(($_COOKIE["Session_ID"]=="Arishti-Admin")){
-    echo "Hi " . $_COOKIE["Session_ID"];
-    echo "<h3>Your Flag is: Flag{" .sha1("adminflag"). " }</h3>" ;
+  echo "<h3>Your Flag is: Exela_Flag{Cookie_Tampering_4dmin}</h3>" ;
 } else{
-  echo "<h3>Can you login as Admin?</h3>" ;
+echo "<h3>Can you login as Admin?</h3>" ;
 }
+
+
 
 ?>
 
