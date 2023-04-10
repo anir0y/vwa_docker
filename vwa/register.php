@@ -48,7 +48,8 @@ if(isset($_POST['btnsignup'])){
     $password = md5($randdata+$password);
     $insertSQL = "INSERT INTO userlogin (id,username,password ) 
      values($id, '$username', '$password')";
-    echo $insertSQL;
+    echo $insertSQL; 
+    echo "the easiest person to deceive is yourself. - Richard Feynman"
     echo $row_cnt;
      if ($con->query($insertSQL) === TRUE) {
         $success_message = "Account created successfully.";
