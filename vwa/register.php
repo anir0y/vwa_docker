@@ -49,7 +49,7 @@ if(isset($_POST['btnsignup'])){
     $insertSQL = "INSERT INTO userlogin (id,username,password ) 
      values($id, '$username', '$password')";
     echo $insertSQL; 
-    echo "the easiest person to deceive is yourself. - Richard Feynman"
+    echo "<br><br>the easiest person to deceive is yourself. - Richard Feynman";
     echo $row_cnt;
      if ($con->query($insertSQL) === TRUE) {
         $success_message = "Account created successfully.";
