@@ -8,6 +8,8 @@ include "dbconf.php";
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/registerpage.css">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -48,8 +50,7 @@ if(isset($_POST['btnsignup'])){
     $password = md5($randdata+$password);
     $insertSQL = "INSERT INTO userlogin (id,username,password ) 
      values($id, '$username', '$password')";
-    echo $insertSQL; 
-    echo "<br><br>the easiest person to deceive is yourself. - Richard Feynman";
+    echo "<br><br>The easiest person to deceive is yourself. - Richard Feynman";
     echo $row_cnt;
      if ($con->query($insertSQL) === TRUE) {
         $success_message = "Account created successfully.";
@@ -110,7 +111,12 @@ if(isset($_POST['btnsignup'])){
 
             <button type="submit" name="btnsignup" class="btn btn-default">Submit</button>
           </form>
+
         </div>
+        <a href="/login.php" class="login-button">
+    <i class="fas fa-sign-in-alt"></i>  <!-- Font Awesome icon for login -->
+    Login
+  </a>
 
      </div>
     </div>

@@ -1,0 +1,39 @@
+
+html body{
+    background-color: white;
+      
+}
+#msg{
+  color: red;
+  margin-left: 31%;
+  font-size: 5vh;
+  font-style: italic;
+}
+
+h1{
+      color: red;
+  }
+  form{
+        margin-left: 50%;
+          margin-right: auto;
+        position: flex;
+    }
+
+    form input{
+          color: green;
+      }
+/* Style for the login button */
+.login-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none; /* Add this line to remove default underline on anchor element */
+}
+
+/* Style for the Font Awesome icon inside the login button */
+.login-button i {
+  margin-right: 10px;
+}
