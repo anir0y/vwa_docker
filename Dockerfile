@@ -9,8 +9,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y wget debconf-utils && \
-    echo "mariadb-server mysql-server/root_password password vulnerables" | debconf-set-selections && \
-    echo "mariadb-server mysql-server/root_password_again password vulnerables" | debconf-set-selections && \
+    echo "mariadb-server mariadb-server/root_password password vulnerables" | debconf-set-selections && \
+    echo "mariadb-server mariadb-server/root_password_again password vulnerables" | debconf-set-selections && \
     apt-get install -y \
     apache2 \
     mariadb-server \
@@ -27,9 +27,12 @@ COPY vwa /var/www/html
 COPY db.sql /docker-entrypoint-initdb.d/db.sql
 
 # Initialize MySQL database
-RUN service mysql start && \
-    sleep 3 && \
-    mysql -uroot -pvulnerables -e "CREATE USER 'app'@'localhost' IDENTIFIED BY 'vulnerables'; CREATE DATABASE vwa; GRANT ALL PRIVILEGES ON vwa.* TO 'app'@'localhost';"
+RUN mkdir -p /var/run/mysqld && \
+    chown -R mysql:mysql /var/run/mysqld && \
+    mysqld_safe --skip-networking & \
+    sleep 5 && \
+    mysql -uroot -pvulnerables -e "CREATE USER 'app'@'localhost' IDENTIFIED BY 'vulnerables'; CREATE DATABASE vwa; GRANT ALL PRIVILEGES ON vwa.* TO 'app'@'localhost';" && \
+    mysqladmin -uroot -pvulnerables shutdown
 
 # Expose port 80
 EXPOSE 80
