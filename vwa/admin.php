@@ -29,10 +29,11 @@ ini_set('display_errors', 1);
 <?php
 
 
-if(($_COOKIE["Session_ID"]=="Arishti-Admin")){
-  echo "<h3>Your Flag is: Exela_Flag{Cookie_Tampering_4dmin}</h3>" ;
+if(($_COOKIE["Session_ID"]=="Admin")){
+  echo "<h3>Your Flag is: Flag{Cookie_Tampering_4dmin}</h3>" ;
 } else{
-echo "<h3>Can you login as Admin?</h3>" ;
+echo "<h3>Can you login as Admin?</h3>"; 
+echo "Try to look into cookies and see if you can find the flag or find a hint";
 }
 
 
@@ -43,6 +44,6 @@ echo "<h3>Can you login as Admin?</h3>" ;
 </div>
  
 <div class="footer">
-  <p>Code with ❤️ by @anir0y </p>   
+<?php include 'static/footer.php';?>
 </body>
 </html>

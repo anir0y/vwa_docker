@@ -26,7 +26,7 @@ if(isset($_POST['btnsignup'])){
    $username = trim($_POST['username']);
    $password = trim($_POST['password']);
    $confirmpassword = trim($_POST['confirmpassword']);
-   $randdata= rand(1000,9999);
+//   $randdata= rand(1000,9999);
 
    $isValid = true;
 
@@ -47,7 +47,8 @@ if(isset($_POST['btnsignup'])){
 
    // Insert records
    if($isValid){
-    $password = md5($randdata+$password);
+//    $password = md5($randdata+$password); // this is how you get them
+    $password = md5($password);
     $insertSQL = "INSERT INTO userlogin (id,username,password ) 
      values($id, '$username', '$password')";
     echo "<br><br>The easiest person to deceive is yourself. - Richard Feynman";
@@ -122,3 +123,4 @@ if(isset($_POST['btnsignup'])){
     </div>
   </body>
 </html>
+<?php include 'static/footer.php';?>

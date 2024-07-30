@@ -203,7 +203,7 @@ echo $q;
 	//ob_clean();
 	
 	header('Location:home.php');
-	setcookie("Session_ID", "Arishti-User", time()+30*24*60*60);
+	setcookie("Session_ID", "User", time()+30*24*60*60);
 	}
 }
 	else{

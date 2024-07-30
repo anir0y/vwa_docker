@@ -8,7 +8,7 @@ ini_set('display_errors', 1);
 if(isset($_COOKIE["Session_ID"])){
     //echo "Hi " . $_COOKIE["Session_ID"];
 } else{
-    echo "<script>alert('You are not authorized!r');</script>";
+    //echo "<script>alert('You are not authorized!r');</script>";
 
 
 }

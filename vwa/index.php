@@ -48,7 +48,7 @@
 <body>
 	<div class="container">
 		<div class="left">
-			<img src="https://seeklogo.com/images/E/exela-technologies-logo-BDE438C264-seeklogo.com.png" width="30%" height="auto"></img>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/6/63/T%C3%9CV_S%C3%BCd_logo.svg" width="30%" height="auto"></img>
 		</div>
 		<div class="line"></div>
 		<div class="right">

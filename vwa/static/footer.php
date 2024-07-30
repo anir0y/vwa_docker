@@ -1,5 +1,5 @@
 <div class="footer">
-  <p>Code with ❤️ by @anir0y </p>   
+  <p>VWA LAB ❤️ © @anir0y </p>   
 </body>
 </html>
 <script>
